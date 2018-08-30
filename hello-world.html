@@ -10,7 +10,7 @@
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: xx-large;
 	font-weight: bold;
-	background-color: #E3F0FB;
+	background-color: #42F4B3;
 	border-radius: 4px;
 	padding: 10px;
 	text-align: center;
@@ -45,7 +45,7 @@
 <body>
 <div id="mainContent">
 <p id="helloText">?</p>
-<button id="clickButton" class="buttonStyle">click me</button>
+<button id="clickButton" class="buttonStyle">click me now</button>
 </div>
 <script> 
 var myButton = document.getElementById("clickButton");
@@ -54,7 +54,7 @@ var myText = document.getElementById("helloText");
 myButton.addEventListener('click', doSomething, false)
 
 function doSomething() {
-	myText.textContent = "hello, world!";
+	myText.textContent = "clicked";
 }
 </script>
 
