@@ -4,59 +4,23 @@
 
 <head>
 <meta charset="utf-8">
-<title>Hello...</title>
-<style type="text/css">
-#mainContent {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: xx-large;
-	font-weight: bold;
-	background-color: #42F4B3;
-	border-radius: 4px;
-	padding: 10px;
-	text-align: center;
-}
-.buttonStyle {
-	border-radius: 20px;
-	border: thin solid #f4b042;
-	padding: 50px;
-	background-color: #f4b042;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	color: #663300;
-	width: 1000px;
-}
-
-.buttonStyle:hover {
-	border: thin solid #FFCC00;
-	background-color: #FCF9D6;
-	color: #996633;
-	cursor: pointer;
-}
-.buttonStyle:active {
-	border: thin solid #99CC00;
-	background-color: #F5FFD2;
-	color: #669900;
-	cursor: pointer;
-}
-
-</style>
+<title>Ian's Website</title>
 </head>
 
 <body>
-<div id="mainContent">
-<p id="helloText">pizzaz</p>
-<button id="clickButton" class="buttonStyle">click me now</button>
-</div>
-<script> 
-var myButton = document.getElementById("clickButton");
-var myText = document.getElementById("helloText");
-
-myButton.addEventListener('click', doSomething, false)
-
-function doSomething() {
-	myText.textContent = "clicked";
-}
-</script>
-
+  <div id="top">
+  	<h1>Ian's Website</h1>
+  </div>
+  <div>
+  	<h2>Navigation</h2>
+  	<ul>
+  		<li>Portfolio</li>
+  		<li>About Me</li>
+  		<li><a href="./programs.html">Programs</a></li>
+  	</ul>
+  </div>
+  <a href="https://en.wikipedia.org/wiki/Red_Panda" target="_blank">
+    <img src="https://i.ytimg.com/vi/b6dT4kyVUuY/maxresdefault.jpg" height="240"/>
+  </a>
 </body>
 </html>
