@@ -1,11 +1,26 @@
 body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(45deg, #243782, #fcf949);
+  background: linear-gradient(-45deg, #243782, #8942f4);
 }
 h1 {
     text-align: center;
     font-family:"Agency FB";
 }
-.image {
-    text-align: center;
+table {
+  background-color: gray;
+  height: 40%;
+  left: 10%;
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 80%;
+}
+thread th {
+  background: orange;
+  color: #FFF;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px; 
+  text-transform: uppercase;
 }
