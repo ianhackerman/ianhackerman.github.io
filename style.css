@@ -1,13 +1,12 @@
 body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(-45deg, #243782, #8942f4);
 }
 h1 {
     text-align: center;
     font-family:"Carter One";
+    background-color: rgb(244, 179, 66);
 }
 table {
-  background-color: white;
   left: 10%;
   margin: 20px auto;
   overflow-y: scroll;
