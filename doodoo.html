@@ -1,0 +1,291 @@
+<html>
+    <head>
+        <title>Story</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style>
+            #container{
+                position:absolute;
+                top: 50px;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background: black;
+            }
+            #leftpane{
+                width: 56%;
+                height: 100%;
+                float: left;
+            }
+            #rightpane{
+                width: 44%;
+                height: 100%;
+                float: left;
+            }
+            #buttons{
+                position:absolute;
+                bottom: 60px;
+                left: 56%;
+                right: 0px;
+                height: 6%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .btn{
+                margin: 20px;
+            }
+            #storytext{
+                position:absolute;
+                left: 56%;
+                right: 0px;
+                height: 92%;
+                top: 0px;
+                bottom: 0px;
+            }
+            body{
+                overflow:hidden;
+            }
+            #graphic{
+                max-height:100%;
+                max-width:100%;
+                width: 100%;
+            }
+            #text{
+                color: white;
+                font-size: 30px;
+            }
+            #notext{
+                color: white;
+                font-size: 30px;
+            }
+        </style>        
+    </head>
+    <body style="margin: 0% 5%">
+        <header>
+            <table id="top" width="100%">
+                <th>
+                    <div id="Title">
+                    <h1 class="face-georgia">Ian Harker</h1>
+                    </div>
+                </th>
+                <th>
+                    <div id="Menu">
+                    <ul class="nav nav-pills justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutme.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactme.html">Contact Me</a>
+                        </li>
+                    </ul>
+                    </div>
+                </th>
+            </table>
+        </header>
+        
+        <div id="container">
+            <div id="leftpane">
+                <img id="graphic" src="pictures/story-entrance.jpg" />
+            </div>
+            <div id="rightpane">
+                <div id="storytext">
+                    <p id="text">lol u dum ideot</p>
+                    <p id="notext">doop</p>
+                </div>
+                <div id="buttons">
+                    <button id="button1" onclick="buttonclick(1)" type="button" class="btn btn-info">en</button>
+                    <button id="button2" onclick="buttonclick(2)" type="button" class="btn btn-info">able</button>
+                    <button id="button3" onclick="buttonclick(3)" type="button" class="btn btn-info">java</button>
+                    <button id="button4" onclick="buttonclick(4)" type="button" class="btn btn-info">script</button>
+                </div>
+            </div>
+            
+        </div>
+    <script>
+        var graphic = document.getElementById("graphic");
+        var text = document.getElementById("text");
+        var button1 = document.getElementById("button1");
+        var button2 = document.getElementById("button2");
+        var button3 = document.getElementById("button3");
+        var button4 = document.getElementById("button4");
+        var state = "intro";
+        var notext = document.getElementById("notext");
+        function buttonclick(button){
+            if (state == "intro"){
+                if (button == 1){
+                    state = "ReadyToStart";
+                    ReadyToStart();
+                }
+            }
+            else if (state == "ReadyToStart"){
+                if (button == 1){
+                    state = "ButtonRoom";
+                    ButtonRoom();
+                }
+                else if (button == 2){
+                    notext.style.display = "block";
+                    notext.innerHTML = "That's dumb...";
+                }
+            }
+            else if (state == "ButtonRoom"){
+                if (button == 1){
+                    state = "SlimeFight";
+                    SlimeFight();
+                }
+                else if (button == 2){
+                    notext.style.display = "block";
+                    notext.innerHTML = "There doesn't seem to be any other way out of this room...";
+                }
+            }
+            else if (state == "SlimeFight"){
+                if (button == 1){
+                    state = "SlimeFight2";
+                    SlimeFight2();
+                }
+                else if (button == 2){
+                    notext.style.display = "block";
+                    notext.innerHTML = "You try to run away but the door is closed behind you...";
+                }
+            }
+            else if (state == "SlimeFight2"){
+                if (button == 1){
+                    state = "Hallway1";
+                    Hallway1();
+                }
+            }
+            else if (state == "Hallway1"){
+                if (button == 1){
+                    state = "MirrorRoom";
+                    MirrorRoom();
+                }
+            }
+            else if (state == "MirrorRoom"){
+                if (button == 1){
+                    state = "MirrorRoom2"
+                    MirrorRoom2();
+                }
+                else if (button == 2){
+                    notext.style.display = "block";
+                    notext.innerHTML = "There doesn't seem to be any other way out of this room..."
+                }
+            }
+            else if (state == "MirrorRoom2"){
+                if (button == 1){
+                    state = "Chest1"
+                    Chest1();
+                }
+                else if (button == 2){
+                    notext.style.display = "block";
+                    notext.innerHTML = "Ok..."
+                }
+            }
+            else if (state == "Chest1"){
+                if (button == 1){
+                    state = "Chest2";
+                    Chest2();
+                }
+            }
+        }
+        function intro(){
+            text.innerHTML = "You are a young man named Tyrone, on a quest in the medieval ages to avenge his father and take his throne to carry on the family name.";
+            button1.innerHTML = "Continue";
+            button1.style.display = "block";
+            button2.style.display = "none";
+            button3.style.display = "none";
+            button4.style.display = "none";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-entrance.jpg";
+        }
+        function ReadyToStart(){
+            text.innerHTML = "Are you ready to start?";
+            button1.innerHTML = "Yes";
+            button2.innerHTML = "No";
+            button1.style.display = "block";
+            button2.style.display = "block";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-entrance.jpg";
+        }
+        function ButtonRoom(){
+            text.innerHTML = "As you enter the room of the worn down cobblestone dungeon, you notice nothing but a lever on the wall by the locked door. Are you going to pull the lever?";
+            button1.innerHTML = "Yes";
+            button2.innerHTML = "No";
+            button1.style.display = "block";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-buttonroom.jpg";
+        }
+        function SlimeFight(){
+            text.innerHTML = "A slime appears behind a moving wall, what do you do?";
+            button1.innerHTML = "Fight";
+            button2.innerHTML = "Run";
+            button1.style.display = "block";
+            button2.style.display = "block";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-slimefight.png";
+        }
+        function SlimeFight2(){
+            text.innerHTML = "You slash your sword towards the slime, killing it. You pick up slime a chunk of slime, which seems to be useful for binding materials together. In the remains of the slime, you find a key with the number 1 on it. The door opens up and you enter the forked hallway";
+            button1.innerHTML = "Continue";
+            button1.style.display = "block";
+            button2.style.display = "none";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-slimeball.png";
+        }
+        function Hallway1(){
+            text.innerHTML = "As you enter the forked hallway, there are two paths to take, both labeled in an unknown language. The only unlocked room is the left one, which you enter. the room seems to be empty except for a mirror on the other side of the room.";
+            button1.innerHTML = "Continue";
+            button1.style.display = "block";
+            button2.style.display = "none";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-hallway1.png";
+        }
+        function MirrorRoom(){
+            text.innerHTML = "The mirror seems suspicous looking, you know this isn't the end of you journey.";
+            button1.innerHTML = "Inspect";
+            button2.innerHTML = "Do nothing, dummy";
+            button1.style.display = "block";
+            button2.style.display = "block";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-mirrorroom.jpg";
+        }
+        function MirrorRoom2(){
+            text.innerHTML = "When you look in the mirror, you notice a button on the other side of the wall, which would otherwise be invisible. Will you press the button?";
+            button1.innerHTML = "Yes, please";
+            button2.innerHTML = "NO";
+            button1.style.display = "block";
+            button2.style.display = "block";
+            button3.style.display = "none";
+            button4.style.display = "none";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-mirrorroom2.jpg";
+        }
+        function Chest1(){
+            text.innerHTML = "After the mirror moves, part of the wall to the left collapses to reveal a wooden chest with faded gold trimmings. Will you open the chest?";
+            button1.innerHTML = "Why not?";
+            button2.innerHTML = "chest r dum";
+            button1.style.display = "block";
+            button2.style.display = "block";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-chest1.jpg";
+        }
+        function Chest2(){
+            text.innerHTML = "You found a can of Sprite Cranberry and a small wooden sheild. Do you want to drink the can of Sprite Cranberry?";
+            button1.innerHTML = "Yeah dude!";
+            button2.innerHTML = "I don't know...";
+            button1.style.display = "block";
+            button2.style.display = "block";
+            notext.style.display = "none";
+            graphic.src = "pictures/story-chest2.jpg";
+        }
+        intro();
+    </script>
+</body>
+</html>
