@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
+  <style>
+    .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 5%;
+    }
+  </style>
+    <body style="margin: 0% 5%">
+        <header>
+            <table id="top" width="100%">
+                <th>
+                    <div id="Title">
+                    <h1 class="face-georgia">Ian Harker</h1>
+                    </div>
+                </th>
+                <th>
+                    <div id="Menu">
+                    <ul class="nav nav-pills justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutme.html">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resume.html">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactme.html">Contact Me</a>
+                        </li>
+                    </ul>
+                    </div>
+                </th>
+            </table>
+        </header>
+        <h1>Arduino Piano</h1>
+        <div>
+        <video width="320" height="480" muted controls style="float: left">
+            <source src="arduino.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>May. 30, 2019</p>
+        <p>Initially, Vance and i wanted to create a board for a Simon Says type game but I later decided to make a piano. As you press a button, the corresponding led lights up and a tone plays. We thought that the buzzer was annoying so Vance had the idea to add a volume knob. At first, we had a problem where the LEDs would detect tables instead of lighting up after a button it pressed, I fixed this by adding INPUT_PULLUP to the button setup. This project was a collaborative effort between Vance and I.</p>
+        <a href="piano.ino" download="piano.ino">Download Arduino Piano</a>
+        <p class="footer">Palm Desert High School</p>
+</body>
+</html>
